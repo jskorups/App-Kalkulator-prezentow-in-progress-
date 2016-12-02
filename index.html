@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 head">
+            Kalkulator swaiteczny
+        </div>
+
+
+
+        <div class="col-md-4 buttons text-left">
+
+
+                     <div class="row text-left">
+                         <span class="link">Wybierz użytkownika</span>
+                     </div>
+                    <div class="row text-center">
+                        <select class="form-control" id="sel1">
+                        <option>Tato</option>
+                        <option>Mama</option>
+                        <option>Ada</option>
+                        <option>Pawel</option>
+                        <option>Kuba</option>
+                        <option>Magda</option>
+                        <option>Klaudia</option>
+                        <option>Damian</option>
+                        <option>Hubcio</option>
+                        </select>
+                    </div>
+
+                     <div class="row text-center">
+                     <span class="link" >Wklej link lub wpisz nazwe prezentu</span>
+                    </div>
+            <input type="text " size="30px" id="linkNazwa">
+            <button type="button" class="btn btn-primary btn-sm" onclick="elList()"  id="getButt">Linkuj</button></th>
+
+        </div>
+
+
+
+        </div>
+
+    </div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+<div class="table-responsive">
+     <table class="table table-inverse">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Tato</th>
+            <th>Mama</th>
+            <th>Ada</th>
+            <th>Pawel</th>
+            <th>Kuba</th>
+            <th>Magda</th>
+            <th>Klaudia</th>
+            <th>Damian</th>
+            <th>Hubcio</th>
+            <th class="summary"><button type="button" class="btn btn-primary btn-sm" onclick="doMath()"  id="Przycisk">Sumuj</button></th>
+
+            <th>Prezenty</th>
+        </tr>
+        </thead>
+
+
+        <tbody>
+
+
+        <tr>
+            <th scope="row">Tato</th>
+            <td class="nope">-----</td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+            <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
+
+            <td><input type="text" name="T" id="zsumowaneT"></td>
+
+
+            <td id="linkTato"></td>
+
+
+        </tr>
+        <tr>
+            <th scope="row">Mama</th>
+            <td><input type="text" class="sumaMamo"></td>
+            <td class="nope">-----</td>
+            <td><input type="text" value="0" class="sumaMamo"></td>
+            <td><input type="text" value="0" class="sumaMamo"></td>
+            <td><input type="text" value="0" class="sumaMamo"></td>
+            <td><input type="text" value="0" class="sumaMamo"></td>
+            <td><input type="text" value="0" class="sumaMamo"></td>
+            <td><input type="text" value="0" class="sumaMamo"></td>
+            <td><input type="text" value="0" class="sumaMamo"></td>
+
+            <td><input type="text" id="zsumowaneM"></td>
+            <td id="linkMama"></td>
+
+
+        </tr>
+        <tr>
+            <th scope="row">Ada</th>
+
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td class="nope">-----</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td>
+
+            </td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th scope="row">Pawel</th>
+
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td class="nope">-----</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Kuba</th>
+
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td class="nope">-----</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Magda</th>
+
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td class="nope">-----</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+
+            <td>
+
+            </td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th scope="row">Klaudia</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td class="nope">-----</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+
+            <td>
+
+            </td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th scope="row">Damian</th>
+
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td class="nope">-----</td>
+            <td><input type="text"></td>
+
+            <td>
+
+            </td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th scope="row">Hubcio</th>
+
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td class="nope">-----</td>
+
+            <td>
+
+            </td>
+            <td></td>
+
+        </tr>
+        </tbody>
+
+
+
+
+    </table>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<script>
+
+
+
+
+    function doMath() {
+
+
+        var my_input1 = document.getElementsByClassName("sumaTato");
+        console.log(my_input1);
+        var count = 0;
+        for (var i = 0; i < my_input1.length; i++) {
+
+            count = count + parseInt(my_input1[i].value);
+        }
+        console.log(document.getElementById("zsumowaneT").value = count);
+
+    }
+
+
+
+    function elList () {
+
+        //pobranie elementu z dropdown listy
+        var idik;
+        var e = document.getElementById("sel1");
+        var f = (e.options[e.selectedIndex].value);
+        console.log(f);
+
+        // ustwienie
+        if (f == 'Mama') {
+            idik = 'linkMama';
+            console.log(idik);
+        }
+        else if (f == 'Tato') {
+            idik = 'linkTato';
+            console.log(idik);
+        }
+
+        var Content = document.getElementById('linkNazwa').value;
+        console.log(Content);
+        document.getElementById(idik).innerHTML = Content;
+
+    }
+
+
+
+
+</script>
+
+</body>
+
+
+
+</html>

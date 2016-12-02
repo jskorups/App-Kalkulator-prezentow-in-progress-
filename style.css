@@ -1,0 +1,139 @@
+body{
+    background-color: #000000;
+    padding-bottom: 10px;
+    background-size: cover;
+
+}
+
+
+table{
+    text-align: center;
+    border-radius: 8px !important;
+    border: 2px solid #ffffff !important;
+
+    margin: 0 auto !important;
+    float: none !important;
+    background-color: indianred;
+
+
+}
+
+#zsumowane  {
+    min-width: 100px !important;
+    text-align: center;
+}
+
+
+input[type=text] {
+    height: 25px;
+    max-width: 50px;
+    border: 3px black solid;
+}
+
+input:hover{
+    background-color: indianred;
+
+}
+input:active{
+    background-color: indianred;
+
+}
+th{
+    height: 30px !important;
+    border: 1px white solid;
+    background-color: grey;
+    text-align: center;
+    padding: 0 !important;
+}
+td{
+    height: 30px;
+    padding: 5px !important;
+}
+.container-fluid{
+    margin-top: 25px;
+    text-align: center;
+    align-content: center;
+}
+.btn-sm{
+    height: 40px;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+.buttonsrow{
+    height: 60px;
+}
+
+.summary{
+    background-color: dimgrey;
+    text-align: center;
+}
+
+
+.nope{
+    background-color: #000000;
+    font-size: 1.2em;
+    border: 1px white solid !important;
+}
+.head{
+
+    text-align: right;
+    min-height: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px !important;
+
+    border: 3px white solid !important;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 24px;
+    color: #000000;
+    background: url('img/name.jpg');
+    background-size: cover;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.buttons{
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px !important;
+    width:30%;
+    float: right;
+    padding-bottom: 10px;
+    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+.active{
+    background-color: #ffff00;
+}
+.link{
+    color: #ffffff;
+    padding-bottom: 10px;
+}
+#sel1{
+    width: 150px;
+    margin: 0 auto !important;
+}
+.btn-success{
+    font-size: 14px;
+}
+
+.table td, .table th {
+    border:1px solid #ffffff;
+}
+
+.table{
+    border: 1px solid #ffffff;
+}
+.kwota{
+    background-color: #ffff00;
+    color: black;
+    width: 50px;
+    height: 20px;
+    border: 1px solid #ffffff;
+    margin-top: 5px;
+}
