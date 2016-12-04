@@ -41,6 +41,8 @@
                      </div>
                     <div class="row text-center">
                         <select class="form-control" id="sel1">
+
+                        <option selected>----</option>
                         <option>Tato</option>
                         <option>Mama</option>
                         <option>Ada</option>
@@ -57,7 +59,7 @@
                      <span class="link" >Wklej link lub wpisz nazwe prezentu</span>
                     </div>
             <input type="text " size="30px" id="linkNazwa">
-            <button type="button" class="btn btn-primary btn-sm" onclick="elList()"  id="getButt">Linkuj</button></th>
+            <button type="button" class="btn btn-primary btn-sm" onclick="elList(); zamiana();"   id="getButt">Linkuj</button></th>
 
         </div>
 
@@ -109,8 +111,6 @@
             <td><input type="text" name="Tato" value="0" class="sumaTato"></td>
 
             <td><input type="text" name="T" id="zsumowaneT"></td>
-
-
             <td id="linkTato"></td>
 
 
@@ -144,10 +144,9 @@
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
-            <td>
 
-            </td>
-            <td></td>
+            <td><input type="text" id="zsumowaneA"></td>
+            <td id="linkAda"></td>
 
         </tr>
         <tr>
@@ -162,10 +161,9 @@
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
-            <td>
+            <td><input type="text" id="zsumowaneP"></td>
+            <td id="linkPawel"></td>
 
-            </td>
-            <td></td>
         </tr>
         <tr>
             <th scope="row">Kuba</th>
@@ -179,10 +177,9 @@
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
-            <td>
+            <td><input type="text" id="zsumowaneK"></td>
+            <td id="linkKuba"></td>
 
-            </td>
-            <td></td>
         </tr>
         <tr>
             <th scope="row">Magda</th>
@@ -196,11 +193,9 @@
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
+            <td><input type="text" id="zsumowaneM"></td>
+            <td id="linkMagda"></td>
 
-            <td>
-
-            </td>
-            <td></td>
 
         </tr>
         <tr>
@@ -214,11 +209,8 @@
             <td class="nope">-----</td>
             <td><input type="text"></td>
             <td><input type="text"></td>
-
-            <td>
-
-            </td>
-            <td></td>
+            <td><input type="text" id="zsumowaneK"></td>
+            <td id="linkKlaudia"></td>
 
         </tr>
         <tr>
@@ -233,11 +225,8 @@
             <td><input type="text"></td>
             <td class="nope">-----</td>
             <td><input type="text"></td>
-
-            <td>
-
-            </td>
-            <td></td>
+            <td><input type="text" id="zsumowaneD"></td>
+            <td id="linkDamian"></td>
 
         </tr>
         <tr>
@@ -252,11 +241,8 @@
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td class="nope">-----</td>
-
-            <td>
-
-            </td>
-            <td></td>
+            <td><input type="text" id="zsumowaneH"></td>
+            <td id="linkHubcio"></td>
 
         </tr>
         </tbody>
@@ -274,12 +260,9 @@
 
 <script>
 
-
-
-
     function doMath() {
 
-
+        //pobranie sumy ze wszytskich pol z className
         var my_input1 = document.getElementsByClassName("sumaTato");
         console.log(my_input1);
         var count = 0;
@@ -287,21 +270,22 @@
 
             count = count + parseInt(my_input1[i].value);
         }
+        //wyrzucenie sumy do inputa
         console.log(document.getElementById("zsumowaneT").value = count);
 
     }
 
-
+    var idik;
 
     function elList () {
 
-        //pobranie elementu z dropdown listy
-        var idik;
+        //pobranie wybranego wiersza z dropdown listy
+
         var e = document.getElementById("sel1");
         var f = (e.options[e.selectedIndex].value);
         console.log(f);
 
-        // ustwienie
+        // dopasowanie elementu z dropdownlisty do konkretnego id
         if (f == 'Mama') {
             idik = 'linkMama';
             console.log(idik);
@@ -310,12 +294,80 @@
             idik = 'linkTato';
             console.log(idik);
         }
+        else if (f == 'Ada') {
+            idik = 'linkAda';
+            console.log(idik);
+        }
+        else if (f == 'Pawel') {
+            idik = 'linkPawel';
+            console.log(idik);
+        }
+        else if (f == 'Kuba') {
+            idik = 'linkKuba';
+            console.log(idik);
+        }
+        else if (f == 'Magda') {
+            idik = 'linkMagda';
+            console.log(idik);
+        }
+        else if (f == 'Damian') {
+            idik = 'linkDamian';
+            console.log(idik);
+        }
+        else if (f == 'Klaudia') {
+            idik = 'linkKlaudia';
+            console.log(idik);
+        }
+        else if (f == 'Hubcio') {
+            idik = 'linkHubcio';
+            console.log(idik);
+        }
+        else {
+            alert("Wybierz uzytkownika")
+        }
+    };
 
-        var Content = document.getElementById('linkNazwa').value;
-        console.log(Content);
-        document.getElementById(idik).innerHTML = Content;
 
+        //pobranie wartosci  z inputa
+
+
+        // Zamiana jesli wklejony zostal link lub brak zmiany jesli podany jest zwykly tekst
+
+        function zamiana () {
+
+            var Content = document.getElementById('linkNazwa').value;
+            console.log(Content);
+
+            substring = "www";
+            substring2 = "http";
+
+            var www = Content.indexOf(substring) !==-1;
+            var http = (Content.indexOf(substring2) !==-1);
+
+            if (www == 1 || http == 1){
+                console.log('JESTES ZWYCEIZCA');
+                var newContent = Content.replace(Content, '<a href="' + Content + '">' + "Link" + '</a>');
+                console.log(newContent);
+
+            }
+            else {
+                var newContent = Content;
+                console.log('Nie jestes zwyciezca');
+            }
+
+
+
+
+
+        document.getElementById(idik).innerHTML = newContent;
     }
+
+
+
+
+
+
+
 
 
 
